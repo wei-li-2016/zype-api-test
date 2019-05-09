@@ -1,0 +1,24 @@
+<table class="table table-bordered">
+  <tbody>
+    <tr>
+      <td>Title</td>
+      <td><%= @video['title'] %></td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td><%= @video['description'] %></td>
+    </tr>
+    <tr>
+      <td>Duration</td>
+      <td><%= distance_of_time_in_words(@video['duration']) %></td>
+    </tr>
+    <tr>
+      <td>Published Date</td>
+      <td><%= (@video['published_at']).to_date.strftime("%m/%d/%Y") %></td>
+    </tr>
+    <tr>
+      <td>Rating</td>
+      <td><%= @video['rating'] %></td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row page-content">
+    <div class="col-md-6">
+    <% if @video['subscription_required'] == true && !session[:access_token].present? %>
+      <%= render 'login' %>
+    <% else %>
+      <%= render 'video' %>
+    <% end %>
+    </div>
+
+    <% if @video['subscription_required'] == false || session[:access_token].present? %>
+      <div class="col-md-6">
+        <%= render 'video_details'%>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="card mb-5">
+  <div class="card-body">
+    <%= form_tag(authenticate_user_path, method: :post) do %>
+      <%= hidden_field_tag 'user[video_id]', request.query_parameters['video_id'] %>
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <%= text_field_tag("user[email]", "" ,class: "form-control") %>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <%= password_field_tag("user[password]", "" ,class: "form-control") %>
+      </div>
+       <%= submit_tag 'Login', class: 'btn btn-primary btn-block' %>
+    <% end %>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-body">
+    <button type="submit" class="btn btn-danger btn-block">Subscribe</button>
+  </div>
+</div>

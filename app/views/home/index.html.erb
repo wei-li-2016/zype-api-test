@@ -1,0 +1,17 @@
+ <div class="container">
+  <div class="row page-content">
+    <% @videos.each do |video| %>
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <%= link_to watch_video_path(video_id: video['_id']), method: :get do %>
+            <%= image_tag (video['thumbnails'][0]['url']), class: 'card-img-top' %>
+          <% end %>
+          <div class="card-body custom-card"></div>
+          <div class="card-footer">
+            <%= link_to video['title'], watch_video_path(video_id: video['_id']), method: :get %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
