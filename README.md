@@ -3,7 +3,7 @@
 ## Things needed to run the application:
 
 * **Ruby version** : ruby 2.5.1p57
-* **Rails version** : ruby 2.5.1p57
+* **Rails version** : rails 5.2.3
 * **Database**: MySql
 * **Database creation**
 ```bash
